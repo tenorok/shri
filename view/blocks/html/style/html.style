@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+}
+
+html,
+input,
+textarea {
+	font-family: tahoma, arial, sans-serif;
+}
+
+html {
+	font-size: 125%;
+}
+
+textarea {
+	box-sizing: content-box;
+}
+
+body {
+	font-size: 50%; /* 10px */
+}
+
+header,
+hgroup,
+nav,
+address,
+article,
+aside,
+dialog,
+figure,
+section,
+footer {
+	display: block;
+	font-style: normal;
+}
+
+ul li {
+	list-style-type: none;
+}
+
+.clearfix:after {
+	clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+a:hover {
+	color: #f00;
+}
+
+/*
+	Стили для псевдоссылок
+	Использование: <a href="" class="pseudo"><i>Псевдоссылка</i></a>
+*/
+.pseudo {
+	position: relative;
+	top: -0.15em;
+	display: inline-block;
+	border-bottom: 0.075em dashed #000;
+	text-decoration: none;
+
+	&:hover {
+		border-color: #f00;
+	}
+
+	& i {
+		position: relative;
+		top: 0.125em;
+		font-style: normal;
+	}
+}

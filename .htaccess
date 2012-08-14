@@ -1,0 +1,37 @@
+# Включение механизма преобразования
+RewriteEngine On
+
+# Базовый URL для преобразований в каталоге
+RewriteBase /
+
+# Защита файлов сервера
+#<Files .*>
+#	Order Deny, Allow
+#	Deny From All
+#</Files>
+ 
+# Защита папок "app/controller", "app/model" и "sys" от просмотра
+RewriteRule ^(?:app/controller|app/model|sys/classes|sys/core.php|sys/require.php)\b.* index.php/$0 [L]
+
+# Преобразование всех URL в index.php/URL
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php/$0 [PT]
+
+# Включение логирования ошибок при отключении вывода ошибок в php: error_reporting(0);
+# php_value log_errors "on"
+# php_value log_errors_max_len "1024"
+# php_value error_log "/logs/error.log"
+
+# Защита от хотлинков
+# RewriteCond %{HTTP_REFERER} !^http://(.+\.)?(google|yandex|mail|rambler|aport|yahoo|msn)\.(ru|com|net)/.*$ [NC]
+# RewriteRule /images/(path_1|path_2)/.*\.(gif|jpe?g|png|bmp)$ /assets/images/hotlink.jpg [L]
+
+# Компрессия js и css файлов
+# http://code.google.com/p/jscsscomp
+# RewriteCond %{REQUEST_FILENAME} -f
+# RewriteRule ^(.*\.)(js|css)$ jscsscomp/jscsscomp.php?q=$1$2 [L,NC]
+# И ещё на эту тему:
+# http://code.google.com/p/minify/
+# http://davidwalsh.name/css-compression-php
+# https://github.com/rgrove/jsmin-php/

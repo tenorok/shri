@@ -1,0 +1,14 @@
+.content {
+	margin: 0 50px 0 345px;
+	border-width: 0 10px;
+	border-style: solid;
+	border-color: #F9F5E4;
+	min-width: 500px;
+	max-width: 940px;
+	padding: 40px 30px;
+}
+	.content__header {
+		font: normal 2.6em georgia, serif;
+		text-align: center;
+		color: #2879AC;
+	}

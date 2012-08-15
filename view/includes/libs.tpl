@@ -1,3 +1,4 @@
+<link href="/assets/images/favicon.gif" rel="icon" type="image/x-icon">
 <script src="/assets/js/jquery-1.7.2.min.js"></script>
 <script src="/assets/js/jquery-ui-1.8.21.min.js"></script>
 <script src="/assets/js/modernizr-2.5.3.js"></script>

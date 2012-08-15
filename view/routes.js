@@ -35,10 +35,15 @@
 	};
 	
 	var routes = [
-		// {
-		// 	url: '/',
-		// 	ctrl: 'controller',
-		// 	func: 'method'
-		// }
+		{
+			url: '/',
+			ctrl: 'index',
+			func: 'init'
+		},
+		{
+			url: '/#/{anchor}',
+			ctrl: 'index',
+			func: 'init'
+		}
 	];
 };

@@ -1,0 +1,11 @@
+.info {
+
+}
+	.info h1 {
+		margin: 22px 0 12px;
+		font: 2.4em georgia, serif;
+	}
+	.info h2 {
+		font: 1.8em tahoma, sans-serif;
+		color: #333;
+	}

@@ -153,7 +153,10 @@ class core {
 	 */
 	public static function dev($dev = false) {
 
-		if($_SESSION['DEV'] && !$dev || $dev) {						// Если режим разработчика был включен, а сейчас его выключили или он просто включен
+		if(
+			isset($_SESSION['DEV']) && $_SESSION['DEV'] && !$dev || // Если режим разработчика был включен, а сейчас его выключили
+			$dev													// или он просто включен
+		) {
 
 			file_put_contents(ROOT . '/view/includes/dev.js', 'window.DEV=' . (($dev) ? 'true;' : 'false;'));
 			$ret = true;											// то надо вернуть true, чтобы собрать JS-файлы с новым значением

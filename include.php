@@ -1,6 +1,11 @@
 <?php
 
 ten_file::include_files(array(							// Файлы библиотек и плагинов
+	array(
+		'type' => 'image/x-icon',
+		'rel'  => 'icon',
+		'href' => 'favicon.gif'
+	),
 	'jquery-1.7.2.min.js',
 	'jquery-ui-1.8.21.min.js',
 	'modernizr-2.5.3.js',
@@ -10,7 +15,8 @@ ten_file::include_files(array(							// Файлы библиотек и пла�
 	'handlebars-1.0.0.beta.6.js'
 ), array(
 	'path' => array(
-		'js' => '/assets/js/'
+		'js'  => '/assets/js/',
+		'gif' => '/assets/images/'
 	),
 	'output_file' => '/view/includes/libs.tpl',
 	'hash' => false

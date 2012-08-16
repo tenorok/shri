@@ -17,12 +17,14 @@ class index {
 			((DEV) ? file_get_contents('view/includes/developer.tpl') : '') .
 			file_get_contents('view/includes/require.tpl');
 
-		$menu    = new Blitz(BLOCKS . 'menu/view/menu.tpl');
-		$content = new Blitz(BLOCKS . 'content/view/content.tpl');
-		$general = new Blitz(BLOCKS . 'info/view/general.tpl');
+		$menu       = new Blitz(BLOCKS . 'menu/view/menu.tpl');
+		$content    = new Blitz(BLOCKS . 'content/view/content.tpl');
+		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
+		$experience = new Blitz(BLOCKS . 'info/view/experience.tpl');
 
 		$info = 
-			$general->parse();
+			$general   ->parse() .
+			$experience->parse();
 
 		$body =
 			$menu   ->parse() .

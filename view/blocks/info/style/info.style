@@ -1,5 +1,5 @@
 .info {
-
+	.clearfix;
 }
 	.info h1 {
 		margin: 22px 0 12px;
@@ -8,4 +8,22 @@
 	.info h2 {
 		font: 1.8em tahoma, sans-serif;
 		color: #333;
+	}
+	.info__img_float_left {
+		float: left;
+		margin-right: 20px;
+	}
+	.info p {
+		margin-bottom: 20px;
+
+		font-size: 1.2em;
+		line-height: 1.5;
+		color: #333;
+	}
+	.info a {
+		color: #425EFF;
+
+		&:hover {
+			color: #f00;
+		}
 	}

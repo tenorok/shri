@@ -40,13 +40,16 @@ ul li {
 	list-style-type: none;
 }
 
-.clearfix:after {
-	clear: both;
-    display: block;
-    visibility: hidden;
-    height: 0;
-	content: ".";
-	line-height: 0;
+.clearfix {
+	
+	&:after {
+		clear: both;
+		display: block;
+		visibility: hidden;
+		height: 0;
+		content: ".";
+		line-height: 0;
+	}
 }
 
 a:hover {

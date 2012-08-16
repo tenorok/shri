@@ -139,11 +139,24 @@
 	border-width: 0 10px;
 	border-style: solid;
 	border-color: #F9F5E4;
-	min-width: 500px;
+	min-width: 580px;
 	max-width: 940px;
-	padding: 40px 30px;
+	padding: 20px 30px 40px 30px;
 }
+	.content__link {
+		padding: 0 0 2px 20px;
+
+		color: #000;
+		font-size: 1.1em;
+
+		background: url(/view/blocks/content/images/git.png) 0 0 no-repeat;
+	}
+	.content__link_type_git {
+
+	}
 	.content__header {
+		margin-top: 20px;
+
 		font: normal 2.6em georgia, serif;
 		text-align: center;
 		color: #2879AC;
@@ -189,13 +202,16 @@ ul li {
 	list-style-type: none;
 }
 
-.clearfix:after {
-	clear: both;
-    display: block;
-    visibility: hidden;
-    height: 0;
-	content: ".";
-	line-height: 0;
+.clearfix {
+	
+	&:after {
+		clear: both;
+		display: block;
+		visibility: hidden;
+		height: 0;
+		content: ".";
+		line-height: 0;
+	}
 }
 
 a:hover {
@@ -223,7 +239,7 @@ a:hover {
 		font-style: normal;
 	}
 }.info {
-
+	.clearfix;
 }
 	.info h1 {
 		margin: 22px 0 12px;
@@ -232,6 +248,24 @@ a:hover {
 	.info h2 {
 		font: 1.8em tahoma, sans-serif;
 		color: #333;
+	}
+	.info__img_float_left {
+		float: left;
+		margin-right: 20px;
+	}
+	.info p {
+		margin-bottom: 20px;
+
+		font-size: 1.2em;
+		line-height: 1.5;
+		color: #333;
+	}
+	.info a {
+		color: #425EFF;
+
+		&:hover {
+			color: #f00;
+		}
 	}.menu {
 	position: fixed;
 	top: 50px;

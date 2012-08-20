@@ -13,6 +13,7 @@ ten_file::include_files(array(							// Файлы библиотек и пла�
 	'jquery.hoverDelay.js',
 	'jquery.maskedinput-1.3.js',
 	'handlebars-1.0.0.beta.6.js',
+	'ZeroClipboard.min.js',
 	'highlight.pack.js',
 	'highlight/magula.css'
 ), array(

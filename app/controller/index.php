@@ -21,10 +21,12 @@ class index {
 		$content    = new Blitz(BLOCKS . 'content/view/content.tpl');
 		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
 		$experience = new Blitz(BLOCKS . 'info/view/experience.tpl');
+		$technical  = new Blitz(BLOCKS . 'info/view/technical.tpl');
 
 		$info = 
 			$general   ->parse() .
-			$experience->parse();
+			$experience->parse() .
+			$technical ->parse();
 
 		$body =
 			$menu   ->parse() .

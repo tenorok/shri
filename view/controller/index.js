@@ -12,6 +12,8 @@
 			if($(link).next('.menu__submenu').is(':hidden'))
 				$(link).trigger('click');
 		}
+
+		hljs.initHighlightingOnLoad();
 	},
 
 	toggleSubMenu: function() {

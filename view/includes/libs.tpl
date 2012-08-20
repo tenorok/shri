@@ -6,3 +6,5 @@
 <script src="/assets/js/jquery.hoverDelay.js"></script>
 <script src="/assets/js/jquery.maskedinput-1.3.js"></script>
 <script src="/assets/js/handlebars-1.0.0.beta.6.js"></script>
+<script src="/assets/js/highlight.pack.js"></script>
+<link href="/assets/css/highlight/magula.css" rel="stylesheet" type="text/css">

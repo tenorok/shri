@@ -12,10 +12,13 @@ ten_file::include_files(array(							// Файлы библиотек и пла�
 	'jquery.placeholder_ten.js',
 	'jquery.hoverDelay.js',
 	'jquery.maskedinput-1.3.js',
-	'handlebars-1.0.0.beta.6.js'
+	'handlebars-1.0.0.beta.6.js',
+	'highlight.pack.js',
+	'highlight/magula.css'
 ), array(
 	'path' => array(
 		'js'  => '/assets/js/',
+		'css' => '/assets/css/',
 		'gif' => '/assets/images/'
 	),
 	'output_file' => '/view/includes/libs.tpl',

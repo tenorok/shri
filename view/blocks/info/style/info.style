@@ -62,17 +62,8 @@
 						content: '';
 					}
 				}
-	.info pre {
+	.info__copy-code {
 		position: relative;
-
-		margin-bottom: 20px;
-
-		font-size: 1.2em;
-		overflow: auto;
-
-		code {
-			padding: 15px 10px;
-		}
 	}
 		.info__copy {
 			position: absolute;
@@ -101,3 +92,13 @@
 			color: #999;
 			opacity: 1;
 		}
+	.info pre {
+		margin-bottom: 20px;
+
+		font-size: 1.2em;
+		overflow: auto;
+
+		code {
+			padding: 15px 10px;
+		}
+	}

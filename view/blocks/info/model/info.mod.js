@@ -8,7 +8,7 @@
 			button     = '<button id="{id}" class="info__copy">копировать</button>',
 			copiedtext = 'скопировано';
 
-		$('pre').each(function(i) {
+		$('.info__copy-code').each(function(i) {
 
 			var id  = 'pre_' + i,
 				ids = '#' + id;
@@ -17,7 +17,7 @@
 
 			clip[id] = new ZeroClipboard.Client();
 
-			clip[id].setText($(this).children('code').html());
+			clip[id].setText($(this).find('code').html());
 			clip[id].glue(id);
 
 			$(window).resize(function() {

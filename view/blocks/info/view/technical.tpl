@@ -10,7 +10,7 @@
 	<p>При клике на ссылку yandex.ru, в браузере возникает событие OnClick. Браузер выполняет HTTP-запрос к http://yandex.ru и ждёт ответ. Сервер  возвращает браузеру сформированную страницу.</p>
 
 	<h2 id="/tech-auto">Автосалон</h2>
-	<pre><code class="javascript">/**
+	<div class="info__copy-code"><pre><code class="javascript">/**
  * Создает экземпляр Машины
  * @this {Car}
  * @param {string} manufacturer Производитель
@@ -200,16 +200,16 @@ yandex.listByCountry('Germany', {price: 'rub'});
 // yandex.list(); //BMW X5 2010, Audi Q5 2012, Toyota Camry 2012
 // yandex.listByCountry('Germany'); //BMW X5 2010, Audi Q5 2012
 
-// @TODO: бонус! выводить список машин с ценой в рублях.</code></pre>
+// @TODO: бонус! выводить список машин с ценой в рублях.</code></pre></div>
 
 	<h2 id="/tech-txt">Текстовые файлы</h2>
     <p>Для того, чтобы найти все текстовые файлы, в имени которых содержится «yandex», а в содержимом — «школа разработки интерфейсов», я бы использовал следующую команду:</p>
-    <pre><code class="bash">find . -type f -name *yandex*.txt | xargs grep -ls "школа разработки интерфейсов"</code></pre>
+    <div class="info__copy-code"><pre><code class="bash">find . -type f -name *yandex*.txt | xargs grep -ls "школа разработки интерфейсов"</code></pre></div>
 
 	<h2 id="/tech-terminal">Терминал</h2>
     <p>Программы с добавленным verbose-режимом, в котором дополнительно выводится значение каждого их аргументов.</p>
     <p><strong>Bash</strong></p>
-    <pre><code class="bash">#!/usr/bin/env bash
+    <div class="info__copy-code"><pre><code class="bash">#!/usr/bin/env bash
 
 usage() {
 cat << EOF
@@ -263,9 +263,9 @@ if [[ "$MESSAGE" != "" ]]; then
     echo $MESSAGE
 fi
 
-echo $COUNT</code></pre>
+echo $COUNT</code></pre></div>
     <p><strong>Python</strong></p>
-    <pre><code class="python">#!/usr/bin/env python
+    <div class="info__copy-code"><pre><code class="python">#!/usr/bin/env python
 
 import argparse
 
@@ -289,7 +289,7 @@ for a in args.arguments:
 if args.message != '':
     print(args.message)
 
-print(count)</code></pre>
+print(count)</code></pre></div>
 	
     <h2 id="/tech-other">Объёмы и обстоятельства</h2>
     <p>Был 2007 год и первый язык программирования, который я изучил — QBasic. Его знание требовалось для вступительных экзаменов в университет. Благодаря этому, сильно заинтересовался программированием и самостоятельно изучал Visual Basic.</p>

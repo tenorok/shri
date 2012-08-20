@@ -1,4 +1,7 @@
 .content {
+	position: relative;
+	z-index: 50;
+
 	margin: 0 50px 0 345px;
 	border-width: 0 10px;
 	border-style: solid;
@@ -6,6 +9,8 @@
 	min-width: 580px;
 	max-width: 940px;
 	padding: 20px 30px 40px 30px;
+
+	background: #fff;
 }
 	.content__link {
 		padding: 0 0 2px 22px;

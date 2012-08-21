@@ -135,9 +135,10 @@
   transform: translate(@x, @y);
 }
 @media handheld, only screen and (max-device-width: 480px) {
+	
 	.content {
-		margin: 0;
-		border: none;
+		margin: 0 !important;
+		border: none !important;
 	}
 		.content__link_type_print {
 			display: none;

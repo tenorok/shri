@@ -4,7 +4,7 @@ ten_file::include_files(array(							// Файлы библиотек и пла�
 	array(
 		'type' => 'image/x-icon',
 		'rel'  => 'icon',
-		'href' => 'favicon.gif'
+		'href' => 'favicon.png'
 	),
 	'jquery-1.7.2.min.js',
 	'jquery-ui-1.8.21.min.js',
@@ -20,10 +20,9 @@ ten_file::include_files(array(							// Файлы библиотек и пла�
 	'path' => array(
 		'js'  => '/assets/js/',
 		'css' => '/assets/css/',
-		'gif' => '/assets/images/'
+		'png' => '/assets/images/'
 	),
-	'output_file' => '/view/includes/libs.tpl',
-	'hash' => false
+	'output_file' => '/view/includes/libs.tpl'
 ));
 
 ten_file::include_files(array(							// Файлы для режима разработчика
@@ -56,4 +55,10 @@ ten_file::include_files(array(							// Основные файлы
 		'js'  => '/assets/js/'
 	),
 	'output_file' => '/view/includes/require.tpl'
+));
+
+ten_file::include_files(array(							// Версия для печати
+	'/assets/css/print.css'
+), array(
+	'output_file' => '/view/includes/print.tpl'
 ));

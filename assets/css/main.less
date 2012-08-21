@@ -149,18 +149,27 @@
 	background: #fff;
 }
 	.content__link {
-		padding: 0 0 2px 22px;
-
 		color: #000;
 		font-size: 1.1em;
+	}
+	.content__link_float_left {
+		float: left;
+	}
+	.content__link_float_right {
+		float: right;
+	}
+	.content__link_type_git {
+		padding: 0 0 2px 22px;
 
 		background: url(/view/blocks/content/images/git.png) 0 0 no-repeat;
 	}
-	.content__link_type_git {
+	.content__link_type_print {
+		padding: 0 0 2px 24px;
 
+		background: url(/view/blocks/content/images/printer.png) 0 0 no-repeat;
 	}
 	.content__header {
-		margin-top: 20px;
+		margin-top: 40px;
 
 		font: normal 2.6em georgia, serif;
 		text-align: center;
@@ -383,6 +392,7 @@ a:hover {
 
 		.menu__link {
 			text-decoration: none;
+			outline: none;
 		}
 			.menu__link-text {
 				.fn-pseudo-link;

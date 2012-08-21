@@ -1,3 +1,4 @@
 <?php
 	
-	 get('/', 'index->page');
+	 get('/',      'index->page');
+	 get('/print', 'index->printPage');

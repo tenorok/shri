@@ -52,6 +52,12 @@
 			ctrl: 'index',
 			func: 'init',
 			call: 'load'
+		},
+		{
+			url:  '/print',
+			ctrl: 'index',
+			func: 'initPrint',
+			call: 'load'
 		}
 	];
 };

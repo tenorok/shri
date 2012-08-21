@@ -152,7 +152,9 @@ var Core = (function($) {
 			var css = {},											// Объявление переменной для последующей конкатенации стилей
 				fileKey,											// Ключ для массива с именем файла
 				fileHref,											// Путь к файлу
-				lessId;												// Идентификатор для less-тега
+				lessId,												// Идентификатор для less-тега
+				tag,												// Переменная для хранения текущего less-тега
+				lessTags = [];										// Массив less-тегов
 			
 			$.each(links, function(key, value) {					// Цикл по всем полученным тегам <link>
 
@@ -165,7 +167,11 @@ var Core = (function($) {
 
 				css[fileKey] = css[fileKey] || '';					// Задание начального значения переменной, если её не существует
 
-				css[fileKey] += $('style#less\\:' + lessId).html();	// Конкатенация стилей
+				tag = $('style#less\\:' + lessId);					// Текущий less-тег
+
+				lessTags.push(tag)									// Добавление текущего less-тега в массив less-тегов
+
+				css[fileKey] += tag.html();							// Конкатенация стилей
 			});
 			
 			var compress = (set.compress === undefined || set.compress) ? true : false;
@@ -175,6 +181,10 @@ var Core = (function($) {
 				css:      JSON.stringify(css),						// Сконкатенированные стили
 				path:     set.path,									// Путь к выходящему файлу
 				compress: compress									// Флаг компрессии CSS-кода
+			}, function() {
+				
+				for(var t = 0; t < lessTags.length; t++)
+					lessTags[t].remove();							// Удаление всех less-тегов со страницы
 			});
 		}
 	},

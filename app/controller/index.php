@@ -10,13 +10,31 @@ class index {
 	 */
 	public static function page() {
 
-		$html = new Blitz(BLOCKS . 'html/view/html.tpl');
+		index::genPage('main');
+	}
+
+	/**
+	 * Версия для печати
+	 *
+	 */
+	public static function printPage() {
+
+		index::genPage('print');
+	}
+
+	/**
+	 * Формирование страницы
+	 *
+	 */
+	private static function genPage($mode) {
 
 		$files = 
-			file_get_contents('view/includes/libs.tpl') .
-			((DEV) ? file_get_contents('view/includes/developer.tpl') : '') .
-			file_get_contents('view/includes/require.tpl');
+			                      file_get_contents('view/includes/libs.tpl') .
+			             ((DEV) ? file_get_contents('view/includes/developer.tpl') : '') .
+			                      file_get_contents('view/includes/require.tpl') .
+			(($mode == 'print') ? file_get_contents('view/includes/print.tpl') : '');
 
+		$html       = new Blitz(BLOCKS . 'html/view/html.tpl');
 		$menu       = new Blitz(BLOCKS . 'menu/view/menu.tpl');
 		$content    = new Blitz(BLOCKS . 'content/view/content.tpl');
 		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
@@ -29,7 +47,7 @@ class index {
 			$technical ->parse();
 
 		$body =
-			$menu   ->parse() .
+			(($mode != 'print') ? $menu->parse() : '') .
 			$content->parse(array(
 				'content' => $info
 			));

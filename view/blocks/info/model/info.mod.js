@@ -20,7 +20,7 @@
 			clip[id].setText($(this).find('code').html());
 			clip[id].glue(id);
 
-			$(window).resize(function() {
+			$(window).bind('load resize', function() {
 				clip[id].reposition();
 			});
 			

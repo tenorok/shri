@@ -134,7 +134,15 @@
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
-.content {
+@media handheld, only screen and (max-device-width: 480px) {
+	.content {
+		margin: 0;
+		border: none;
+	}
+		.content__link_type_print {
+			display: none;
+		}
+}.content {
 	position: relative;
 	z-index: 50;
 
@@ -252,6 +260,11 @@ a:hover {
 		top: 0.125em;
 		font-style: normal;
 	}
+}@media handheld, only screen and (max-device-width: 480px) {
+
+	.info__copy {
+		display: none;
+	}
 }.info {
 	font-size: 1.2em;
 
@@ -355,7 +368,15 @@ a:hover {
 		code {
 			padding: 15px 10px;
 		}
-	}.menu {
+	}
+	embed {
+		outline: none;
+	}@media handheld, only screen and (max-device-width: 480px) {
+
+	.menu {
+		display: none;
+	}
+}.menu {
 	position: fixed;
 	top: 50px;
 	left: 50px;
@@ -411,5 +432,7 @@ a:hover {
 			margin: 4px 0;
 		}
 			.menu__submenu-link {
+				outline: none;
+				
 				.fn-pseudo-link;
 			}

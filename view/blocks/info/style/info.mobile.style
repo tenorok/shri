@@ -1,0 +1,6 @@
+@media handheld, only screen and (max-device-width: 480px) {
+
+	.info__copy {
+		display: none;
+	}
+}

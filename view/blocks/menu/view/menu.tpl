@@ -60,4 +60,9 @@
 			</li>
 		</ul>
 	</li>
+	<li class="menu__item">
+		<a href="#/other" class="menu__link">
+			<span class="menu__link-text">И ещё</span>
+		</a>
+	</li>
 </ul>

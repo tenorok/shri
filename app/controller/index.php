@@ -40,11 +40,13 @@ class index {
 		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
 		$experience = new Blitz(BLOCKS . 'info/view/experience.tpl');
 		$technical  = new Blitz(BLOCKS . 'info/view/technical.tpl');
+		$other      = new Blitz(BLOCKS . 'info/view/other.tpl');
 
 		$info = 
 			$general   ->parse() .
 			$experience->parse() .
-			$technical ->parse();
+			$technical ->parse() .
+			$other     ->parse();
 
 		$body =
 			(($mode != 'print') ? $menu->parse() : '') .

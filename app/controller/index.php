@@ -40,12 +40,19 @@ class index {
 		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
 		$experience = new Blitz(BLOCKS . 'info/view/experience.tpl');
 		$technical  = new Blitz(BLOCKS . 'info/view/technical.tpl');
+		
+		$frontender = new Blitz(BLOCKS . 'info/view/frontender.tpl');
+		$ratingCtrl = new Blitz(BLOCKS . 'rating-control/view/rating-control.tpl');
+
 		$other      = new Blitz(BLOCKS . 'info/view/other.tpl');
 
 		$info = 
 			$general   ->parse() .
 			$experience->parse() .
 			$technical ->parse() .
+			$frontender->parse(array(
+				'rating-control' => $ratingCtrl->parse()
+			)) .
 			$other     ->parse();
 
 		$body =

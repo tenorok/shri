@@ -183,7 +183,11 @@
 		font: normal 2.6em georgia, serif;
 		text-align: center;
 		color: #2879AC;
-	}* {
+	}
+		.content__first-letter {
+			color: #FF000A;
+			font-weight: normal;
+		}* {
 	margin: 0;
 	padding: 0;
 	font-size: 100%;
@@ -282,6 +286,9 @@ a:hover {
 		margin: 30px 0 20px;
 		font: 1.5em tahoma, sans-serif;
 		color: @info-color;
+	}
+	.info h3 {
+		margin: 20px 0 10px;
 	}
 	.info__img_float_left {
 		float: left;
@@ -436,4 +443,37 @@ a:hover {
 				outline: none;
 				
 				.fn-pseudo-link;
-			}
+			}.rating-control {
+	margin: 20px 0;
+
+	.clearfix;
+}
+	.rating-control__item {
+		float: left;
+		margin: 0 !important;
+
+		line-height: 1.6;
+
+		&:before {
+			content: "" !important;
+			margin-right: 0 !important;
+		}
+	}
+		.rating-control__rating {
+			margin-right: 10px;
+		}
+		.rating-control__link {
+			display: block;
+			margin: 0 1px;
+			width: 16px;
+			height: 16px;
+
+			background: url('/view/blocks/rating-control/images/star.png') 0 0 no-repeat;
+
+			text-indent: -1000em;
+			text-decoration: none;
+			outline: none;
+		}
+		.rating-control__item_active .rating-control__link {
+			background-position: 0 -16px;
+		}

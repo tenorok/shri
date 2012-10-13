@@ -15,6 +15,9 @@
 		font: 1.5em tahoma, sans-serif;
 		color: @info-color;
 	}
+	.info h3 {
+		margin: 20px 0 10px;
+	}
 	.info__img_float_left {
 		float: left;
 		margin-right: 20px;

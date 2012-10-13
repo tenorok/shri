@@ -61,6 +61,19 @@
 		</ul>
 	</li>
 	<li class="menu__item">
+		<a href="#/frontender" class="menu__link menu__link_sub_yes">
+			<span class="menu__link-text">Задание для верстальщика</span><span class="menu__link-arrow">&#9660;</span>
+		</a>
+		<ul class="menu__submenu">
+			<li class="menu__submenu-item">
+				<a href="#/frontender-css" class="menu__submenu-link">Про CSS</a>
+			</li>
+			<li class="menu__submenu-item">
+				<a href="#/frontender-js" class="menu__submenu-link">Про JS</a>
+			</li>
+		</ul>
+	</li>
+	<li class="menu__item">
 		<a href="#/other" class="menu__link">
 			<span class="menu__link-text">И ещё</span>
 		</a>

@@ -39,3 +39,7 @@
 		text-align: center;
 		color: #2879AC;
 	}
+		.content__first-letter {
+			color: #FF000A;
+			font-weight: normal;
+		}

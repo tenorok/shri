@@ -11,7 +11,7 @@ define('SYS',        ROOT . '/sys/classes/');					// Определение ди
 define('CONTROLLER', ROOT . '/app/controller/');				// Определение директории с классами контроллеров
 define('MODEL',      ROOT . '/app/model/');						// Определение директории с классами модели
 
-define('DEV', false);											// Вкл/выкл режима разработчика
+define('DEV', true);											// Вкл/выкл режима разработчика
 
 require 'core.php';												// Подключение ядра
 spl_autoload_register(array('core', 'auto_load'));				// Включение автоподгрузки классов

@@ -23,7 +23,7 @@
 		margin-right: 20px;
 	}
 	.info p {
-		margin-bottom: 20px;
+		margin: 20px 0;
 
 		line-height: 1.5;
 		color: @info-color;
@@ -107,4 +107,14 @@
 	}
 	embed {
 		outline: none;
+	}
+	code {
+		font-size: 12px;
+	}
+	.code {
+		padding: 0 4px;
+
+		background: #F4F4F4;
+
+		.rounded();
 	}

@@ -34,24 +34,28 @@ class index {
 			                      file_get_contents('view/includes/require.tpl') .
 			(($mode == 'print') ? file_get_contents('view/includes/print.tpl') : '');
 
-		$html       = new Blitz(BLOCKS . 'html/view/html.tpl');
-		$menu       = new Blitz(BLOCKS . 'menu/view/menu.tpl');
-		$content    = new Blitz(BLOCKS . 'content/view/content.tpl');
-		$general    = new Blitz(BLOCKS . 'info/view/general.tpl');
-		$experience = new Blitz(BLOCKS . 'info/view/experience.tpl');
-		$technical  = new Blitz(BLOCKS . 'info/view/technical.tpl');
+		$html        = new Blitz(BLOCKS . 'html/view/html.tpl');
+		$menu        = new Blitz(BLOCKS . 'menu/view/menu.tpl');
+		$content     = new Blitz(BLOCKS . 'content/view/content.tpl');
+		$general     = new Blitz(BLOCKS . 'info/view/general.tpl');
+		$experience  = new Blitz(BLOCKS . 'info/view/experience.tpl');
+		$technical   = new Blitz(BLOCKS . 'info/view/technical.tpl');
 		
-		$frontender = new Blitz(BLOCKS . 'info/view/frontender.tpl');
-		$ratingCtrl = new Blitz(BLOCKS . 'rating-control/view/rating-control.tpl');
+		$frontender  = new Blitz(BLOCKS . 'info/view/frontender.tpl');
+		$ratingCtrl  = new Blitz(BLOCKS . 'rating-control/view/rating-control.tpl');
+		$progressBar = new Blitz(BLOCKS . 'progress-bar/view/progress-bar.tpl');
+		$button      = new Blitz(BLOCKS . 'button/view/button.tpl');
 
-		$other      = new Blitz(BLOCKS . 'info/view/other.tpl');
+		$other       = new Blitz(BLOCKS . 'info/view/other.tpl');
 
 		$info = 
 			$general   ->parse() .
 			$experience->parse() .
 			$technical ->parse() .
 			$frontender->parse(array(
-				'rating-control' => $ratingCtrl->parse()
+				'rating-control' => $ratingCtrl ->parse(),
+				'progress-bar'   => $progressBar->parse(),
+				'button'         => $button     ->parse()
 			)) .
 			$other     ->parse();
 

@@ -11,6 +11,8 @@
 		contentMod.init();				// Версия для печати
 
 		ratingCtrlMod.init();			// Рейтинг-контрол
+		
+		progressBarMod.init();			// Прогресс-бар
 	},
 
 	initPrint: function() {

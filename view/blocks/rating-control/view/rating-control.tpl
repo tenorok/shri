@@ -19,8 +19,7 @@
 		<a href="#" class="rating-control__link">5</a>
 	</li>
 </ul>
-<p>JS-объект, отвечающий за работу контрола можно найти здесь: /view/blocks/rating-control/model/rating-control.mod.js</p>
-<p>Или ниже:</p>
+<p><a href="https://github.com/tenorok/shri/blob/master/view/blocks/rating-control/model/rating-control.mod.js">Объект</a>, отвечающий за работу контрола:</p>
 <div class="info__copy-code"><pre><code class="javascript">var ratingCtrlMod = {
 
 	itemActiveClass: 'rating-control__item_active',

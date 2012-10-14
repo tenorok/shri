@@ -9,6 +9,8 @@
       Ryan Faerman
 
     More info at: http://lesselements.com
+
+    Modified: Artem Kurbatov
 -----------------------------------------------------*/
 
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
@@ -38,6 +40,14 @@
   background: -moz-linear-gradient(center bottom,
                                    rgb(@start,@start,@start) 0%,
                                    rgb(@stop,@stop,@stop) 100%);
+}
+.multi-gradient(@color, @gradients) {
+  background: @color;
+  background: -webkit-linear-gradient(bottom, @gradients);
+  background:    -moz-linear-gradient(bottom, @gradients);
+  background:     -ms-linear-gradient(bottom, @gradients);
+  background:      -o-linear-gradient(bottom, @gradients);
+  background:         linear-gradient(bottom, @gradients);
 }
 .bordered(@top-color: #EEE, @right-color: #EEE, @bottom-color: #EEE, @left-color: #EEE) {
   border-top: solid 1px @top-color;
@@ -134,7 +144,11 @@
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
-.content {
+.box-sizing(@box) {
+  -webkit-box-sizing: @box;
+     -moz-box-sizing: @box;
+          box-sizing: @box;
+}.content {
 	margin: 0;
 	border: none;
 }

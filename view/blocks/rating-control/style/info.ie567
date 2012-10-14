@@ -1,0 +1,6 @@
+.rating-control {
+	cursor: default;
+}
+*:first-child + html .rating-control {
+  min-height: 1%;
+}

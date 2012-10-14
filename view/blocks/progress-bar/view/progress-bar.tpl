@@ -13,7 +13,7 @@
 <button class="button button_change-percent_interval">30-70%</button>
 <button class="button button_change-percent_interval">70-146%</button>
 
-<p>Объект, отвечающий за работу прогресс-бара:</p>
+<p><a href="https://github.com/tenorok/shri/blob/master/view/blocks/progress-bar/model/progress-bar.mod.js">Объект</a>, отвечающий за работу прогресс-бара:</p>
 <div class="info__copy-code"><pre><code class="javascript">var progressBarMod = {
 
 	init: function() {

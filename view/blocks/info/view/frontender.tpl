@@ -7,7 +7,6 @@
 	{{ $button         }}
 
 	<h2 id="/frontender-js">Про JavaScript</h2>
-	<p>Я немного увеличил исходный массив для появления двойных значений.</p>
 	<div class="info__copy-code"><pre><code class="javascript">var hashClasses = {
 
         fullClasses: [

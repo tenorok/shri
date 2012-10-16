@@ -147,7 +147,6 @@
 .box-sizing(@box) {
   -webkit-box-sizing: @box;
      -moz-box-sizing: @box;
-      -ms-box-sizing: @box;
           box-sizing: @box;
 }.button {
 	@color: #212121;
@@ -499,38 +498,39 @@ a:hover {
 				
 				.fn-pseudo-link;
 			}.progress-bar {
-	position: relative;
-	overflow: hidden;
-
-	border: 1px solid #eee;
-	height: 13px;
-	width: 220px;
-
-	text-align: center;
-	background: #fff;
-
+    position: relative;
+    overflow: hidden;
+    
+    width: 220px;
+    
 	.rounded(8px);
-	.inner-shadow(0, 2px, 1px, 0.2);
 }
-	.progress-bar__percent {
-		position: relative;
-		z-index: 20;
+	.progress-bar__line {
+		border: 1px solid #eee;
+		height: 13px;
 
-		font-size: 9px;
-		font-weight: bold;
-		vertical-align: top;
-	}
-	.progress-bar__progress {
-		position: absolute;
-		z-index: 10;
-		top: 0;
-		left: 0;
+		text-align: center;
+		background: #fff;
 
-		height: 100%;
-
-		.multi-gradient(#5ccb14, ~"#59AB1E 1%, #8BDA1A 20%, #7BD517 22%, #3CC214 41%, #29BF14 62%, #ABFF58 100%");
 		.rounded(8px);
-	}.rating-control {
+		.inner-shadow(0, 2px, 1px, 0.2);
+	}
+		.progress-bar__percent {
+			position: relative;
+
+			font-size: 9px;
+			font-weight: bold;
+			vertical-align: top;
+		}
+		.progress-bar__progress {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+
+			.multi-gradient(#5ccb14, ~"#59AB1E 1%, #8BDA1A 20%, #7BD517 22%, #3CC214 41%, #29BF14 62%, #ABFF58 100%");
+			.rounded(8px);
+		}.rating-control {
 	margin: 20px 0;
 
 	.clearfix;

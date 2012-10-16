@@ -59,38 +59,62 @@
 
         getHash: function() {
 
-            var fullCls  = hashClasses.fullClasses,             // Массив полных имён классов
-                shortCls = hashClasses.shortClasses,            // Массив кратких имён классов
-                hash = {},                                      // Объект для конечного вывода
-                sort = [],                                      // Массив для сортировки классов по количеству
-                shortI = 0;                                     // Итератор массива кратких имён классов
+            var fullCls  = hashClasses.fullClasses,                 // Массив полных имён классов
+                hash = {},                                          // Объект для конечного вывода
+                sort = [];                                          // Массив для сортировки классов по количеству
             
-            for(var c = 0; c < fullCls.length; c++) {           // Цикл по массиву полных имён классов
+            for(var c = 0; c < fullCls.length; c++) {               // Цикл по массиву полных имён классов
 
-                if(fullCls[c] in hash)                          // Если класс уже был добавлен
-                    hash[fullCls[c]]++;                         // Нужно увеличить его количество
+                if(fullCls[c] in hash)                              // Если класс уже был добавлен
+                    hash[fullCls[c]]++;                             // Нужно увеличить его количество
                 else
-                    hash[fullCls[c]] = 1;                       // Иначе его количество равно единице
+                    hash[fullCls[c]] = 1;                           // Иначе его количество равно единице
             }
 
-            for(var h in hash)                                  // Цикл по свойстам сформированного объекта
-                sort.push([h, hash[h]]);                        // Добавление класса и его количества в массив сортировки
+            for(var h in hash)                                      // Цикл по свойстам сформированного объекта
+                sort.push([h, hash[h]]);                            // Добавление класса и его количества в массив сортировки
 
-            sort.sort(function(a, b) { return b[1] - a[1]; });  // Сортировка массива по количеству классов (по убыванию)
+            sort.sort(function(a, b) { return b[1] - a[1]; });      // Сортировка массива по количеству классов (по убыванию)
 
-            for(var e = 0; e < sort.length; e++) {              // Цикл формирования итоговой таблицы соответствий
+            var listShCls = hashClasses.getShortClasses(            // Получение сформированного массива всех необходимых кратких имён классов
+                sort.length,
+                hashClasses.shortClasses
+            );
 
-                hash[sort[e][0]] = shortCls[shortI];            // Назначение соответствующего краткого класса
+            hash = {};                                              // Обнуление возвращаемого объекта
 
-                shortCls[shortI] +=                             // Добавление к текущему короткому классу
-                    String(shortCls[shortI++])                  // Его первого символа и инкрементирование итератора массива кратких классов
-                        .substr(0, 1);
+            for(var e = 0; e < sort.length; e++)                    // Цикл формирования итоговой таблицы соответствий
+                hash[sort[e][0]] = listShCls[e];
 
-                if(shortI >= shortCls.length)                   // Если итератор вышел за пределы массива
-                    shortI = 0;                                 // Нужно начать итерации заново
+            return hash;                                            // Возвращение итоговой таблицы соответствий
+        },
+
+        allShrotClasses: [],                                        // Массив для хранения всех сформированных кратких имён классов
+
+        getShortClasses: function(nodeCount, prevClasses) {         // Функция формирования массива всех необходимых кратких имён классов
+
+            var shortCls = hashClasses.shortClasses,                // Массив кратких имён классов
+                allShCls = hashClasses.allShrotClasses,             // Массив хранения всех сформированных кратких имён классов
+                newClasses = [];                                    // Массив для формирования новых имён классов
+
+            for(var p = 0; p < prevClasses.length; p++) {           // Цикл по массиву классов, сформированному в прошлый раз
+
+                for(var s = 0; s < shortCls.length; s++) {          // Цикл по заданному массиву кратких классов
+
+                    if(allShCls.length == nodeCount)                // Если сгенерированно достаточное количество кратких классов
+                        return shortCls.concat(allShCls);           // Нужно вернуть итоговый массив кратких классов
+
+                    var className = prevClasses[p] + shortCls[s];   // Формирование нового имени класса
+
+                    allShCls.push(className);                       // Добавление нового имени класса в массив всех классов
+                    newClasses.push(className);                     // Добавление нового имени класса в массив новых классов
+                }
             }
-
-            return hash;                                        // Возвращение итоговой таблицы соответствий
+            
+            return hashClasses.getShortClasses(                     // Рекурсивный вызов функции формирования массива кратких классов
+                nodeCount,
+                newClasses
+            );
         }
     };
 

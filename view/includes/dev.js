@@ -1,1 +1,1 @@
-window.DEV=false;
+window.DEV=true;

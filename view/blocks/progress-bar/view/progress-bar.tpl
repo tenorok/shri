@@ -1,7 +1,9 @@
 <h3>Прогресс-бар</h3>
 <div class="progress-bar">
-	<span class="progress-bar__percent">10%</span>
-	<div class="progress-bar__progress" style="width: 10%"></div>
+	<div class="progress-bar__line">
+		<div class="progress-bar__progress" style="width: 10%"></div>
+		<span class="progress-bar__percent">10%</span>
+	</div>
 </div>
 <p>Состояние прогресс-бара изменяется путём вызова метода <code class="code">progressBarMod.change(percent)</code>, где percent - это процент (число).</p>
 <p>Примеры единичного вызова:</p>

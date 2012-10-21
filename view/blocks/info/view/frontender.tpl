@@ -7,6 +7,8 @@
 	{{ $button         }}
 
 	<h2 id="/frontender-js">Про JavaScript</h2>
+    
+    <h3>Сокращение классов</h3>
 	<div class="info__copy-code"><pre><code class="javascript">var hashClasses = {
 
         fullClasses: [
@@ -101,7 +103,7 @@
 
                 for(var s = 0; s < shortCls.length; s++) {          // Цикл по заданному массиву кратких классов
 
-                    if(allShCls.length == nodeCount)                // Если сгенерированно достаточное количество кратких классов
+                    if(allShCls.length >= nodeCount - shortCls.length) // Если сгенерировано достаточное количество кратких классов
                         return shortCls.concat(allShCls);           // Нужно вернуть итоговый массив кратких классов
 
                     var className = prevClasses[p] + shortCls[s];   // Формирование нового имени класса
@@ -119,4 +121,41 @@
     };
 
     console.log(hashClasses.getHash());</code></pre></div>
+
+    <h3><a href="http://company.yandex.ru/job/vacancies/trainee_javascript.xml">Вывод односвязного списка в обратном порядке (вопрос 15)</a></h3>
+    <div class="info__copy-code"><pre><code class="javascript">function reversePrint(linkedList) {
+        
+    var value = linkedList.value,
+        next  = linkedList.next,
+        out   = [];
+    
+    while(true) {
+        
+        out.push(value);
+        
+        if(next == null)
+            break;
+        
+        value = next.value;
+        next  = next.next;
+    }
+    
+    console.log(out.reverse().join(', '));
+}
+     
+var someList = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
+ 
+reversePrint(someList);</code></pre></div>
 </div>
